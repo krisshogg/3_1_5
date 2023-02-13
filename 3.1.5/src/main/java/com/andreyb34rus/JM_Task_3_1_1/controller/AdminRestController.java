@@ -26,7 +26,7 @@ public class AdminRestController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getById(@PathVariable("id") int id) {
+    public ResponseEntity<User> getUserById(@PathVariable("id") int id) {
         User response = userService.getUserById(id);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -37,7 +37,7 @@ public class AdminRestController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
     @PutMapping()
-    public ResponseEntity<HttpStatus> editUser(@RequestBody User user) {
+    public ResponseEntity<HttpStatus> updateUser(@RequestBody User user) {
         userService.update(user);
         return ResponseEntity.ok(HttpStatus.OK);
     }

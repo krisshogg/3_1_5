@@ -140,6 +140,7 @@ on(document, 'click', '.btnEdit', e => {
         idEdit.value = user.id
         nameEdit.value = user.username
         emailEdit.value = user.email
+        passwordEdit.value = user.password
         passwordEdit.value = ''
         rolesEdit.innerHTML = `
             <option value="${dbRoles[0].id}">${dbRoles[0].role}</option>
