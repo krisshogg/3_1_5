@@ -1,9 +1,5 @@
 package com.andreyb34rus.JM_Task_3_1_1.model;
 
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,7 +10,6 @@ import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "users")
-@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class User implements UserDetails {
 
     @Id

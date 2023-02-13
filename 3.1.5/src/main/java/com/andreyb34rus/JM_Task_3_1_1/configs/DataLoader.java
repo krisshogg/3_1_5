@@ -18,7 +18,6 @@ public class DataLoader implements ApplicationRunner {
     private UserService userService;
     private final RoleRepository roleRepository;
 
-
     @Autowired
     public DataLoader(UserService userService, RoleRepository roleRepository) {
         this.userService = userService;

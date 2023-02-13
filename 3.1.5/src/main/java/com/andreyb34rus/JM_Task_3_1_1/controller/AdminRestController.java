@@ -36,11 +36,13 @@ public class AdminRestController {
         userService.save(user);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
     @PutMapping()
     public ResponseEntity<HttpStatus> updateUser(@RequestBody User user) {
         userService.update(user);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable("id") int id) {
         userService.delete(id);

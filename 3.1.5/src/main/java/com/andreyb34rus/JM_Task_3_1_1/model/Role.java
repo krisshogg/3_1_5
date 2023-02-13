@@ -1,10 +1,7 @@
 package com.andreyb34rus.JM_Task_3_1_1.model;
 
-
 import org.springframework.security.core.GrantedAuthority;
-
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "roles")
