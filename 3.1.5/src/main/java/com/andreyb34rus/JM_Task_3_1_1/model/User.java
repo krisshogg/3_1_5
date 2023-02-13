@@ -1,6 +1,7 @@
 package com.andreyb34rus.JM_Task_3_1_1.model;
 
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

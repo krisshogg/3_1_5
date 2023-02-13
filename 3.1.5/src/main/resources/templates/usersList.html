@@ -43,9 +43,9 @@
 </header>
 <div class="container-fluid">
     <div class="row">
-        <!-- Панель навигации -->
         <div class="col-2" style="padding: 15px 0 0">
             <ul class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+
                 <!-- Страница админа -->
                 <li class="nav-item">
                     <a class="nav-link active" data-bs-toggle="tab" href="#adminPage" id="v-pills-admin-tab"
@@ -60,7 +60,7 @@
             </ul>
         </div>
 
-        <!--Основная часть-->
+        <!--Основа-->
         <div class="col-10 bg-light">
             <div class="tab-content" id="v-pills-tabContent" style="padding: 15px 20px 0; height: 100vh">
 
@@ -74,7 +74,7 @@
                                 <a class="nav-link active" id="nav-admin-tab" data-bs-toggle="tab" role="tab"
                                    href="#nav-admin">Users table</a>
                             </li>
-                            <!--User new page-->
+
                             <li class="nav-item">
                                 <a class="nav-link" id="nav-user-tab" data-bs-toggle="tab" role="tab"
                                    href="#nav-new">New user</a>
@@ -104,7 +104,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- New user page -->
+
+                        <!-- New user-->
                         <div class="tab-pane fade show" id="nav-new" role="tabpanel" style="height: 100vh">
                             <div class="card">
                                 <div class="card-header fw-bold"><h5 class="mx-0 my-1">Add new user</h5></div>
@@ -143,7 +144,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Admin aka User page -->
+
+                <!--Страница юзера-->
                 <div class="tab-pane fade show" id="userPage">
                     <h1>User information-page</h1>
                     <div class="card my-3">
@@ -169,7 +171,8 @@
         </div>
     </div>
 </div>
-<!-- Modal edit -->
+
+<!-- Изменить -->
 <div class="modal fade" id="modalEdit" tabindex="-1"
      aria-labelledby="exampleModalLabel" aria-hidden="true" style="height: 100vh">
     <div class="modal-dialog">
@@ -181,7 +184,8 @@
                         data-bs-dismiss="modal" aria-label="Close">
                 </button>
             </div>
-            <!--Edit form-->
+
+            <!--Форма-->
             <form id="editForm">
                 <div class="modal-body text-center">
                     <div class="container-fluid col-6">
@@ -224,7 +228,7 @@
     </div>
 </div>
 
-<!-- Modal delete -->
+<!--Удалить-->
 <div class="modal fade" id="modalDelete" tabindex="-1"
      aria-labelledby="modalLabel" aria-hidden="true" style="height: 100vh">
     <div class="modal-dialog">
@@ -235,7 +239,8 @@
                         data-bs-dismiss="modal" aria-label="Close">
                 </button>
             </div>
-            <!--Delete form-->
+
+            <!--форма-->
             <form>
                 <div class="modal-body text-center">
                     <div class="container-fluid col-6">

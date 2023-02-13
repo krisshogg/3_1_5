@@ -1,5 +1,5 @@
 const url = 'http://localhost:8080/api/admin/'
-const dbRoles = [{id: 1, name: "ROLE_USER"}, {id: 2, name: "ROLE_ADMIN"}]
+const dbRoles = [{id: 1, role: "ROLE_USER"}, {id: 2, role: "ROLE_ADMIN"}]
 
 
 fetch('api/user/')
@@ -138,12 +138,12 @@ on(document, 'click', '.btnEdit', e => {
         .catch(error => console.log(error))
     const getUserById = (user) => {
         idEdit.value = user.id
-        nameEdit.value = user.name
+        nameEdit.value = user.username
         emailEdit.value = user.email
         passwordEdit.value = ''
         rolesEdit.innerHTML = `
-            <option value="${dbRoles[0].id}">${dbRoles[0].name}</option>
-            <option value="${dbRoles[1].id}">${dbRoles[1].name}</option>
+            <option value="${dbRoles[0].id}">${dbRoles[0].role}</option>
+            <option value="${dbRoles[1].id}">${dbRoles[1].role}</option>
             `
         Array.from(rolesEdit.options).forEach(opt => {
             user.roles.forEach(role => {
@@ -166,7 +166,7 @@ editForm.addEventListener('submit', (e) => {
         },
         body: JSON.stringify({
             id: idForm,
-            name: nameEdit.value,
+            username: nameEdit.value,
             email: emailEdit.value,
             password: passwordEdit.value,
             roles: listRoles
@@ -198,11 +198,11 @@ on(document, 'click', '.btnDelete', e => {
         .catch(error => console.log(error))
     const getUserById = (user) => {
         idDelete.value = user.id
-        nameDelete.value = user.name
+        nameDelete.value = user.username
         emailDelete.value = user.email
         rolesDelete.innerHTML = `
-            <option value="${dbRoles[0].id}">${dbRoles[0].name}</option>
-            <option value="${dbRoles[1].id}">${dbRoles[1].name}</option>
+            <option value="${dbRoles[0].id}">${dbRoles[0].role}</option>
+            <option value="${dbRoles[1].id}">${dbRoles[1].role}</option>
             `
         Array.from(rolesDelete.options).forEach(opt => {
             user.roles.forEach(role => {
